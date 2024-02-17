@@ -7,6 +7,9 @@
 body {
     position: relative;
 }
+.txt {
+    color: azure;
+}
 .container {
     position: relative;
     max-width: 100%;
@@ -19,7 +22,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: darkgreen;
+    background-color: rgb(0,92,89);
 }
 .header i {
     font-size: 24px;
@@ -27,9 +30,17 @@ body {
 .header p {
     font-size: 28px;
     letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .header b {
     font-family:"Monotype Corsiva";
+}
+.header p img {
+    position: relative;
+    width: 50px;
+    height: 50px;
 }
 .header .configuration {
     width: 150px;
@@ -39,7 +50,7 @@ body {
     list-style: none;
     transform: rotate(90deg);
     transform-origin: top right;
-    background: forestgreen;
+    background: rgb(0,92,89);
     padding: 5px;
 }
 .header .configuration li {
@@ -77,7 +88,7 @@ body {
     left: -165px;
     width: 165px;
     min-height: 100vh;
-    background: forestgreen;
+    background: rgb(0,92,89);
     transition: 1s;
 }
 .aside.left-to-rigth {
@@ -92,7 +103,7 @@ body {
     font-size: 26px;
     font-weight: 700;
     color: red;
-    -webkit-text-stroke: 1px forestgreen;
+    -webkit-text-stroke: 1px rgb(0,92,89);
     margin-bottom: 3px;
     padding: 8px;
 }
@@ -112,7 +123,7 @@ body {
     font-size: 26px;
     font-weight: 700;
     color: red;
-    -webkit-text-stroke: 1px forestgreen;
+    -webkit-text-stroke: 1px rgb(0,92,89);
     margin-bottom: 3px;
     padding: 8px;
 }
@@ -124,7 +135,7 @@ body {
     right: -165px;
     width: 165px;
     min-height: 100vh;
-    background: forestgreen;
+    background: rgb(0,92,89);
     transition: 1s;
 }
 .aside2.rigth-to-left {
@@ -146,7 +157,7 @@ body {
     font-size: 20px;
     border-bottom: 1px solid lime;
 }
-.aside2 i {
+.aside2 #close2 {
     font-size: 26px;
     font-weight: 700;
     color: red;
@@ -154,10 +165,39 @@ body {
     margin-bottom: 3px;
     padding: 8px;
 }
+.aside2 #open {
+    position: absolute;
+    left: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: aqua;
+    -webkit-text-stroke: 1px brown;
+    display: none;
+}
+.section {
+    font-weight: 700;
+    padding: 15px;
+    background: rgb(249,238,216);
+    min-height: calc(100vh - 46px);
+    /* line-height: 25px; */
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+.dayContext {
+    width: 310px;
+    padding: 8px;
+    background: rgb(249,238,216);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 .moon {
-    background: #000016 !important;
+    background: #1e2831 !important;
     color: azure !important;
 }
+
 
 @media screen and (min-width: 458px){
     
