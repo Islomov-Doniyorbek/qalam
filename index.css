@@ -54,8 +54,12 @@ body {
     padding: 5px;
 }
 .header .configuration li {
-    border-bottom: 1px solid lime;
+    /* border-bottom: 1px solid lime; */
     font-size: 16px;
+    font-family: "Monotype Corsiva";
+    margin-top: 18px;
+    /* font-size: 20px; */
+    border-bottom: 1px solid lime;
 }
 .header .configuration li:first-child {
     border-bottom: 1px solid silver;
@@ -82,7 +86,7 @@ body {
     }
 }
 .aside {
-    position: absolute;
+    position: fixed;
     padding: 5px 2px 5px 2px;
     top: 0;
     left: -165px;
@@ -129,7 +133,7 @@ body {
 }
 
 .aside2 {
-    position: absolute;
+    position: fixed;
     padding: 5px 2px 5px 2px;
     top: 0;
     right: -165px;
