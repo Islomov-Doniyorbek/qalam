@@ -7,6 +7,14 @@
 body {
     position: relative;
 }
+body::-webkit-scrollbar {
+    background: rgb(0,92,89);
+    width: 5px;
+}
+body::-webkit-scrollbar-thumb {
+    background: blue;
+    border: 1px solid gold;
+}
 .txt {
     color: azure;
 }
@@ -26,6 +34,9 @@ body {
 }
 .header i {
     font-size: 24px;
+    cursor: pointer;
+    -webkit-text-stroke: 1px olive;
+    text-shadow: 0 0 8px azure;
 }
 .header p {
     font-size: 28px;
@@ -35,7 +46,7 @@ body {
     justify-content: center;
 }
 .header b {
-    font-family:"Monotype Corsiva";
+    font-family:"Corsiva";
 }
 .header p img {
     position: relative;
@@ -52,13 +63,12 @@ body {
     transform-origin: top right;
     background: rgb(0,92,89);
     padding: 5px;
+    color: azure;
 }
 .header .configuration li {
-    /* border-bottom: 1px solid lime; */
     font-size: 16px;
-    font-family: "Monotype Corsiva";
+    font-family: "Corsiva";
     margin-top: 18px;
-    /* font-size: 20px; */
     border-bottom: 1px solid lime;
 }
 .header .configuration li:first-child {
@@ -89,8 +99,8 @@ body {
     position: fixed;
     padding: 5px 2px 5px 2px;
     top: 0;
-    left: -165px;
-    width: 165px;
+    left: -180px;
+    width: 180px;
     min-height: 100vh;
     background: rgb(0,92,89);
     transition: 1s;
@@ -117,7 +127,8 @@ body {
     list-style: none;
 }
 .aside ul li {
-    font-family: "Monotype Corsiva";
+    cursor: pointer;
+    font-family: "Corsiva";
     margin-top: 18px;
     font-size: 20px;
     border-bottom: 1px solid lime;
@@ -136,11 +147,20 @@ body {
     position: fixed;
     padding: 5px 2px 5px 2px;
     top: 0;
-    right: -165px;
-    width: 165px;
-    min-height: 100vh;
+    right: -180px;
+    width: 180px;
+    height: 100vh;
     background: rgb(0,92,89);
     transition: 1s;
+    overflow: auto;
+}
+.aside2::-webkit-scrollbar {
+    background: rgb(0,92,89);
+    width: 5px;
+}
+.aside2::-webkit-scrollbar-thumb {
+    background: red;
+    /* border: 1px solid gold; */
 }
 .aside2.rigth-to-left {
     transition: 1s;
@@ -156,9 +176,10 @@ body {
     list-style: none;
 }
 .aside2 ul li {
-    font-family: "Monotype Corsiva";
+    font-family: "Corsiva";
     margin-top: 18px;
     font-size: 20px;
+    cursor: pointer;
     border-bottom: 1px solid lime;
 }
 .aside2 #close2 {
@@ -168,16 +189,16 @@ body {
     -webkit-text-stroke: 1px forestgreen;
     margin-bottom: 3px;
     padding: 8px;
+    cursor: pointer;
 }
-.aside2 #open {
-    position: absolute;
-    left: -18px;
-    top: 50%;
-    transform: translateY(-50%);
+#open {
+    margin-right: 15px;
     font-size: 24px;
-    color: aqua;
-    -webkit-text-stroke: 1px brown;
+    color: azure;
+    -webkit-text-stroke: 1px olive;
+    text-shadow: 0 0 8px azure;
     display: none;
+    cursor: pointer;
 }
 .section {
     font-weight: 700;
@@ -203,6 +224,6 @@ body {
 }
 
 
-@media screen and (min-width: 458px){
+@media screen and (max-width: 458px){
     
 }

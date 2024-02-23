@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body 
+{
+    position: relative;
+}
+.container 
+{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+form {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 20px;
+}
+header {
+    width: 100%;
+    position: relative;
+    background: rgb(0,92,89);
+}
+header h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    padding: 5px;
+    font-family: "Corsiva";
+}
+header a {
+    text-align: center;
+    color: azure;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+form .fluid {
+    width: 80%;
+    position: relative;
+}
+.fluid input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    border: 1px outset azure;
+    resize: none;
+    background: rgb(249,238,216);
+}

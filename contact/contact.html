@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://db.onlinewebfonts.com/c/d85e6ab19860a0a1cc2c3d7a3eb7f98c?family=Corsiva" rel="stylesheet">
+    <link rel="stylesheet" href="./cont.css">
+    <title>Fikr</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Fikr va mulohazalaringizni biz bilan bo'lishing!</h1>
+            <a href="/bosh.html">Ortga</a>
+        </header>
+        <form method="post">
+            <div class="fluid">
+                <label for="name">
+                    Ism:
+                </label>
+                <br>
+                <input required type="text" placeholder="ism" id="ism">                    
+            </div>
+            <div class="fluid">
+                <label for="email">
+                    Email:
+                </label>
+                <br>
+                <input required type="email" placeholder="email" id="email"> 
+            </div>
+            <div class="fluid">
+                <label for="msg">
+                    Xabar:
+                </label>
+                <br>
+                <textarea required name="msg" id="msg" cols="30" rows="10" placeholder="Xabar qoldiring..."></textarea> 
+                <button id="btn" type="submit"><i class="fa fa-send"></i></button> 
+            </div>
+        </form>
+    </div>
+    <script src="./contact.js"></script>
+</body>
+</html>

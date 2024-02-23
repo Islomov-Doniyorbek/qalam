@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://db.onlinewebfonts.com/c/d85e6ab19860a0a1cc2c3d7a3eb7f98c?family=Corsiva" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./index.css">
     <title>Qalam</title>
@@ -14,8 +15,12 @@
         <div class="header">
                 <i id="menu" class="fa fa-navicon txt"></i>
                 <p class="txt">
-                    <img src="./rasm.jpg" alt="0"><b>Q</b>alam</p>
-                <i id="config" class="fa fa-cog txt"></i>
+                    <img src="./rasm.jpg" alt="0"><b>Q</b>alam
+                </p>
+                <p>
+                    <i id="open" class="fa fa-toggle-left"></i>
+                    <i id="config" class="fa fa-cog txt"></i>
+                </p>
                 <ul class="configuration bg-dark">
                     <li><i id="closeConfig" class="fa fa-close"></i>&nbsp;Yopish</li>
                     <li><i id="sun" class="fa fa-sun-o"></i>&nbsp;Kunduzgi rejim</li>
@@ -27,13 +32,11 @@
             <i id="close" class="fa fa-close"></i>
             <ul class="list txt">
                 <li><p>Rivoyatlar</p></li>
-                <li><p>Manbalar</p></li>
-                <li>Aloqa</li>
-                <!-- <p>Aloqa</p> -->
+                <li><p>Anbiyolar tarixi</p></li>
+                <li onclick="contact()"><em>Aloqa</em></li>
             </ul>
         </div>
         <div class="aside2 bg-dark">
-            <i id="open" class="fa fa-toggle-left"></i>
             <i id="close2" class="fa fa-close"></i>
             <ul class="list txt">
                 
@@ -47,5 +50,6 @@
 
     <script src="./index.js"></script>
     <script src="./rivoyat.js"></script>
+    <script src="./tarix.js"></script>
 </body>
 </html>

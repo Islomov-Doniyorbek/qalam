@@ -68,6 +68,28 @@ function rivoyat() {
     })
 
 }
+function tarix() {
+    let section = document.querySelector(".section")
+    let div = document.createElement("div")
+    let rAsideLiElements = document.querySelectorAll(".aside2 li")
+    rAsideLiElements.forEach((e, i) => {
+        e.addEventListener("click", function () {
+            if (section.innerHTML == "") {
+                div.innerHTML = tarixTheme[i]
+                section.appendChild(div)
+            } else {
+                let sectionChild = document.querySelectorAll(".section div")
+                // let rAsideLiElements = document.querySelectorAll(".aside2 li")
+                for (let j = 0; j < sectionChild.length; j++) {
+                    section.innerHTML = ""
+                }
+                div.innerHTML = tarixTheme[i]
+                section.appendChild(div)
+            }
+        })
+    })
+
+}
 function asideRight() {
     let asdR = document.querySelector(".aside2")
     let close2 = document.querySelector("#close2")
@@ -80,10 +102,10 @@ function asideRight() {
     })
     let Llist = document.querySelector(".aside2 .list")
     let asidelistElements = document.querySelectorAll(".aside p")
-    let rivoyatlar = ["Qatiqchi haqida rivoyat", "Ikki Sulaymon va Uch gavhar", "Taqdir haqida", "Temirchi"]
-    let maqollar = ["?", "?", "?"]
+    let rivoyatlar = ["Qatiqchi haqida rivoyat", "Ikki Sulaymon va Uch gavhar", "Taqdir haqida", "Temirchi","Bedana rivoyati", "Boy va kambag'al qo'shni", "Ikki do'st va yetti farzand"]
+    let tarixlar = ["Odam alayhissalom", "Idris alayhissalom","Nuh alayhissalom","Hud alayhissalom","Solih alayhissalom", "Ibrohim alayhissalom", "Lut alayhissalom", "Ismoil alayhissalom", "Isxoq alayhissalom", "Yaqub alayhissalom", "Yusuf alayhissalom", "Shuayb alayhissalom", "Muso alayhissalom", "Xorun alayhissalom", "Yunus alayhissalom", "Dovud alayhissalom", "Sulaymon alayhissalom", "Ilyos alayhissalom", "Al Yasa alayhissalom", "Zakariyo alayhissalom", "Iso alayhissalom", "Muhammad alayhissalom"]
     let manbalar = ["Fikr"]
-    let lists = [rivoyatlar, maqollar, manbalar]
+    let lists = [rivoyatlar, tarixlar, manbalar]
     let aside = document.querySelector(".aside")
     asidelistElements.forEach((e, i) => {
         e.addEventListener("click", function () {
@@ -111,7 +133,8 @@ function asideRight() {
 
             if (e == asidelistElements[0]) {
                 rivoyat()
-                // asdR.classList.remove("rigth-to-left")
+            } else if (e == asidelistElements[1]) {
+                tarix()
             }
         })
 
@@ -132,3 +155,8 @@ function share() {
     })
 }
 share()
+
+
+function contact() {
+    location.href = "./contact/contact.html"
+}
