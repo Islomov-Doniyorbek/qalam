@@ -11,7 +11,7 @@ function userConnectMeTgBot() {
         let msg = document.querySelector("#msg");
         let username = document.querySelector("#ism");
         let email = document.querySelector("#email");
-        let information = `Ism: ${username.value} \n Email: ${email.value}\n Xabar: ${msg.value}`
+        let information = `Ism: ${username.value}<br> \n Email: ${email.value}<br>\n Xabar: ${msg.value}`
 
         fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${information}`, {
             method: "GET"
