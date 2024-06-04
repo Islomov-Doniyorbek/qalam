@@ -102,8 +102,10 @@ function asideRight() {
     })
     let Llist = document.querySelector(".aside2 .list")
     let asidelistElements = document.querySelectorAll(".aside p")
-    let rivoyatlar = ["Qatiqchi haqida rivoyat", "Ikki Sulaymon va Uch gavhar", "Taqdir haqida", "Temirchi","Bedana rivoyati", "Boy va kambag'al qo'shni", "Ikki do'st va yetti farzand"]
-    let tarixlar = ["Odam alayhissalom", "Idris alayhissalom","Nuh alayhissalom","Hud alayhissalom","Solih alayhissalom", "Ibrohim alayhissalom", "Lut alayhissalom", "Ismoil alayhissalom", "Isxoq alayhissalom", "Yaqub alayhissalom", "Yusuf alayhissalom", "Shuayb alayhissalom", "Muso alayhissalom", "Xorun alayhissalom", "Yunus alayhissalom", "Dovud alayhissalom", "Sulaymon alayhissalom", "Ilyos alayhissalom", "Al Yasa alayhissalom", "Zakariyo alayhissalom", "Iso alayhissalom", "Muhammad alayhissalom"]
+    let rivoyatlar = ["Qatiqchi haqida rivoyat", "Ikki Sulaymon va Uch gavhar", "Taqdir haqida", "Temirchi","Bedana rivoyati", "Boy va kambag'al qo'shni", "Ikki do'st va yetti farzand","Shayton qochgan inson", "Cho'pon yutib ketdi","Bemor podshoh"]
+
+
+    let tarixlar = ["Odamato qissasi I","Odamato qissasi II", "Idris alayhissalom","Nuh alayhissalom","Hud alayhissalom","Solih alayhissalom", "Ibrohim alayhissalom", "Lut alayhissalom", "Ismoil alayhissalom", "Isxoq alayhissalom", "Yaqub alayhissalom", "Yusuf alayhissalom", "Shuayb alayhissalom", "Muso alayhissalom", "Xorun alayhissalom", "Yunus alayhissalom", "Dovud alayhissalom", "Sulaymon alayhissalom", "Ilyos alayhissalom", "Al Yasa alayhissalom", "Zakariyo alayhissalom", "Iso alayhissalom", "Muhammad alayhissalom"]
     let manbalar = ["Fikr"]
     let lists = [rivoyatlar, tarixlar, manbalar]
     let aside = document.querySelector(".aside")
