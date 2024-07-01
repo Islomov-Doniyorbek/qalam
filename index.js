@@ -52,18 +52,61 @@ function rivoyat() {
     let rAsideLiElements = document.querySelectorAll(".aside2 li")
     rAsideLiElements.forEach((e, i) => {
         e.addEventListener("click", function () {
+            let nom = e.innerText;
             if (section.innerHTML == "") {
                 div.innerHTML = rivoyatTheme[i]
                 section.appendChild(div)
             } else {
                 let sectionChild = document.querySelectorAll(".section div")
-                // let rAsideLiElements = document.querySelectorAll(".aside2 li")
                 for (let j = 0; j < sectionChild.length; j++) {
                     section.innerHTML = ""
                 }
-                div.innerHTML = rivoyatTheme[i]
+                div.innerHTML = rivoyatTheme[i] + `<form method="post">
+                <div class="fluid">
+                    <label for="name">
+                        Ism:
+                    </label>
+                    <br>
+                    <input required type="text" placeholder="ism" id="ism1">                    
+                </div>
+                <div class="fluid">
+                    <label for="msg1">
+                        Xabar:
+                    </label>
+                    <br>
+                    <textarea required name="msg" id="msg1" cols="20" rows="3" placeholder="Izoh qoldiring..."></textarea> 
+                    <button id="btn" type="submit"><i class="fa fa-send"></i></button> 
+                </div>
+            </form>`
                 section.appendChild(div)
             }
+            let form = document.querySelector("form")
+
+    let bot = {
+        TOKEN: "7051132521:AAF_mDQuFa3XNS1P_FKwaRycZGvJSrM7dIk",
+        chatID: "5126880787"
+    }
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+
+        let msg = document.querySelector("#msg1");
+        let username = document.querySelector("#ism1");
+        let information = `Kim tomonidan: ${username.value} \n ${nom} uchun izoh!\n "${msg.value}"`
+
+        fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${information}`, {
+            method: "GET"
+        })
+            .then(success => {
+            alert("Xabar yuborildi! \nElektron pochtangizga izoh qoldiriladi, salomat bo'ling!")
+            }, error => {
+                alert("Xabar yuborilmadi!")
+                console.log(error);
+            })
+    
+    
+        
+
+    })
         })
     })
 
@@ -161,4 +204,34 @@ share()
 
 function contact() {
     location.href = "./contact/contact.html"
+}
+
+function comment() {
+    let form = document.querySelector("form")
+
+    let bot = {
+        TOKEN: "7051132521:AAF_mDQuFa3XNS1P_FKwaRycZGvJSrM7dIk",
+        chatID: "5126880787"
+    }
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+
+        let msg = document.querySelector("#msg1");
+        let username = document.querySelector("#ism1");
+        let information = `Ism: ${username.value} \n Xabar: ${msg.value}`
+
+        fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${information}`, {
+            method: "GET"
+        })
+            .then(success => {
+            alert("Xabar yuborildi! \nElektron pochtangizga izoh qoldiriladi, salomat bo'ling!")
+            }, error => {
+                alert("Xabar yuborilmadi!")
+                console.log(error);
+            })
+    
+    
+        
+
+    })
 }
